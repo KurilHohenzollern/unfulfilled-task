@@ -4,10 +4,10 @@
 class ListModel
 {
     // соединяемся с БД
-    protected $host = "localhost";
+    protected $host = "eu-cdbr-west-01.cleardb.com";
     protected $dbname = "cartpower";
-    protected $username = "root";
-    protected $password = "root";
+    protected $username = "bdfba8f894e478";
+    protected $password = "43e93423";
     protected $conn;
     protected $error;
 
