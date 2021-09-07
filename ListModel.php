@@ -4,10 +4,10 @@
 class ListModel
 {
     // соединяемся с БД
-    protected $host = "eu-cdbr-west-01.cleardb.com";
+    protected $host = "localhost";
     protected $dbname = "cartpower";
-    protected $username = "bdfba8f894e478";
-    protected $password = "43e93423";
+    protected $username = "root";
+    protected $password = "root";
     protected $conn;
     protected $error;
 
@@ -47,8 +47,8 @@ class ListModel
         }
 
         // изменить задачу
-        public function editTask($id, $text) {
-            $this->conn->query("UPDATE `task` SET text`= '$text' WHERE id= $id");
+        public function editTask($text, $id) {
+            $this->conn->query("UPDATE `task` SET `text`= '$text' WHERE id = $id ");
         }
 
         //авторизация админа
@@ -67,7 +67,7 @@ class ListModel
                 exit();
             }
 
-            setcookie('user', $usersCol['user'], time() + 3600, "/");
+            /*setcookie('user', $usersCol['user'], time() + 3600, "/");*/
 
             $this->conn->close();
 
