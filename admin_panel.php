@@ -56,13 +56,13 @@ if (!empty($_POST)) {
                 <td><?=$parameter[3]?></td>
                 <td>
                     <form method="POST" action="/admin_panel.php">
-                <input type="hidden" name="id" value="<?=$parameter[0]?>">
+                <input type="hidden" name="id" value="">
                 <input type="checkbox" name="done" value="">
                     </form>
                 </td>
                 <td>
                     <form method="POST" action="/admin_panel.php">
-                    <input type="hidden" name="id" value="<?=$parameter[0]?>">
+                    <input type="hidden" name="id" value="">
                     <input type="submit" value="удалить">
                     <input type="hidden" name="action" value="deleteTask">
                     </form>
@@ -96,9 +96,3 @@ if (!empty($_POST)) {
 
 </body>
 <body>
-<a href="exit.php">Выйти</a>
-</body>
-</html>
-
-
-
